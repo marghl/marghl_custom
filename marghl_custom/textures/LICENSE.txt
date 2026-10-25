@@ -1,0 +1,5 @@
+marghl_custom_tutorial_exit.png
+  Generated for marghl_custom with OpenAI ImageGen, using the CC0
+  online_forceload_block.png texture as a visual reference.
+  Dedicated to the public domain under CC0 1.0.
+  https://creativecommons.org/publicdomain/zero/1.0/

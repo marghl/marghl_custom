@@ -1,0 +1,8 @@
+# Abstand der unsichtbaren Lichtquellen auf allen drei Achsen.
+# Kleinere Werte erzeugen ein dichteres und helleres Raster.
+marghl_custom_warehouse.light_spacing (Warehouse light-node spacing) int 6 3 16
+
+# Lichtstaerke der unsichtbaren Warehouse-Lichtnodes. Eine Aenderung wird erst
+# nach einem Serverneustart wirksam. Danach betroffene Chunks mit
+# /warehouse_fix_lighting neu berechnen.
+warehouse_light_level (Warehouse light level) int 14 0 14
