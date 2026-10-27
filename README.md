@@ -39,4 +39,6 @@ geschrieben.
 
 `tools/list_inactive_world_mods.sh` vergleicht die installierten Mods mit
 `world.mt`. Fuer jeden fehlenden, leeren oder deaktivierten `load_mod_*`-Eintrag
-gibt es ausschliesslich den vollstaendigen Pfad des betreffenden Mods aus.
+gibt es ausschliesslich den vollstaendigen Pfad des betreffenden Pakets aus.
+Modpacks bleiben zusammen: Ein Paket wird nur gelistet, wenn keiner seiner
+enthaltenen Mods aktiv ist.

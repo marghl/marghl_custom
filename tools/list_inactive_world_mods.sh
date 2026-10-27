@@ -35,19 +35,29 @@ done < <(
 	' "$world_config"
 )
 
-find "$mods_root" -type f -name mod.conf \
-	-not -path '*/.git/*' -print0 |
-while IFS= read -r -d '' mod_conf; do
-	mod_dir=${mod_conf%/mod.conf}
-	mod_name=$(sed -n 's/^name[[:space:]]*=[[:space:]]*//p' "$mod_conf" |
-		head -n 1 | tr -d '\r')
-	[ -n "$mod_name" ] || mod_name=${mod_dir##*/}
+for package_dir in "$mods_root"/*; do
+	[ -d "$package_dir" ] || continue
+	found_mod=false
+	found_active_mod=false
 
-	value=${load_values[$mod_name]-}
-	case ${value,,} in
-		""|false|no|off|0)
-			printf '%s\n' "$mod_dir"
-			;;
-	esac
+	while IFS= read -r -d '' mod_conf; do
+		found_mod=true
+		mod_dir=${mod_conf%/mod.conf}
+		mod_name=$(sed -n 's/^name[[:space:]]*=[[:space:]]*//p' "$mod_conf" |
+			head -n 1 | tr -d '\r')
+		[ -n "$mod_name" ] || mod_name=${mod_dir##*/}
+
+		value=${load_values[$mod_name]-}
+		case ${value,,} in
+			""|false|no|off|0) ;;
+			*) found_active_mod=true ;;
+		esac
+	done < <(
+		find "$package_dir" -type f -name mod.conf \
+			-not -path '*/.git/*' -print0
+	)
+
+	if [ "$found_mod" = true ] && [ "$found_active_mod" = false ]; then
+		printf '%s\n' "$package_dir"
+	fi
 done | sort -u
-
