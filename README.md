@@ -14,6 +14,9 @@ Funktionsbereiche miteinander zu vermischen.
   bei `Y = -30000`.
 - `marghl_custom_epic`: Epic-Bedingung und automatische Ladeaktion fuer
   benannte Speicherstaende.
+- `marghl_custom_override`: Sammelt serverweite Anpassungen vorhandener Mods.
+  Aktuell entfernt er die Rezepte und Guide-Eintraege fuer den
+  Cottages-Amboss und -Hammer, ohne vorhandene Exemplare zu loeschen.
 
 Alle Befehle und die genaue Bedienung stehen in den README-Dateien der
 jeweiligen Untermods.
