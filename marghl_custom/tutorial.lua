@@ -1,4 +1,6 @@
 local storage = assert(marghl_custom.storage)
+local S = assert(marghl_custom.S)
+local F = minetest.formspec_escape
 local state_key = "marghl_custom:tutorial_state"
 local pending = "pending"
 local completed = "completed"
@@ -79,12 +81,12 @@ local function update_exit_formspec(pos)
 		radius = default_radius
 		meta:set_int("radius", radius)
 	end
-	meta:set_string("infotext", "Tutorial-Ende (Radius: " .. radius .. ")")
+	meta:set_string("infotext", S("Tutorial exit (radius: @1)", radius))
 	meta:set_string("formspec",
 		"formspec_version[4]size[7,3]" ..
-		"label[0.5,0.5;Erkennungsradius]" ..
-		"field[0.5,1.0;3.0,0.8;radius;Radius (1-" .. maximum_radius .. ");" .. radius .. "]" ..
-		"button_exit[4.5,1.0;2.0,0.8;save;Speichern]"
+		"label[0.5,0.5;" .. F(S("Detection radius")) .. "]" ..
+		"field[0.5,1.0;3.0,0.8;radius;" .. F(S("Radius (1-@1)", maximum_radius)) .. ";" .. radius .. "]" ..
+		"button_exit[4.5,1.0;2.0,0.8;save;" .. F(S("Save")) .. "]"
 	)
 end
 
@@ -107,7 +109,7 @@ local function scan_exit(pos)
 end
 
 minetest.register_node("marghl_custom:tutorial_exit", {
-	description = "Tutorial-Ende",
+	description = S("Tutorial exit"),
 	tiles = {"marghl_custom_tutorial_exit.png"},
 	paramtype = "light",
 	sunlight_propagates = true,
@@ -180,51 +182,51 @@ minetest.register_on_respawnplayer(function(player)
 end)
 
 minetest.register_chatcommand("tutorial_set_start", {
-	description = "Setzt den Startpunkt fuer neue Tutorial-Spieler",
+	description = S("Sets the starting point for new tutorial players"),
 	privs = {server = true},
 	func = function(name)
 		local player = minetest.get_player_by_name(name)
 		if not player then
-			return false, "Spieler ist nicht online."
+			return false, S("Player is not online.")
 		end
 		local pos = vector.round(player:get_pos())
 		set_stored_pos("tutorial_start", pos)
-		return true, "Tutorial-Start gesetzt: " .. minetest.pos_to_string(pos)
+		return true, S("Tutorial start set: @1", minetest.pos_to_string(pos))
 	end,
 })
 
 minetest.register_chatcommand("tutorial_set_spawn", {
-	description = "Setzt den echten Spawn nach Abschluss des Tutorials",
+	description = S("Sets the real spawn after completing the tutorial"),
 	privs = {server = true},
 	func = function(name)
 		local player = minetest.get_player_by_name(name)
 		if not player then
-			return false, "Spieler ist nicht online."
+			return false, S("Player is not online.")
 		end
 		local pos = vector.round(player:get_pos())
 		set_stored_pos("tutorial_real_spawn", pos)
-		return true, "Echter Spawn gesetzt: " .. minetest.pos_to_string(pos)
+		return true, S("Real spawn set: @1", minetest.pos_to_string(pos))
 	end,
 })
 
 minetest.register_chatcommand("tutorial_reset", {
-	description = "Schickt einen Spieler erneut durch das Tutorial",
-	params = "<Spielername>",
+	description = S("Sends a player through the tutorial again"),
+	params = S("<player name>"),
 	privs = {server = true},
 	func = function(_, param)
 		local name = param:match("^%s*(%S+)%s*$")
 		if not name or not minetest.player_exists(name) then
-			return false, "Unbekannter Spieler."
+			return false, S("Unknown player.")
 		end
 		local player = minetest.get_player_by_name(name)
 		if not player then
-			return false, "Der Spieler muss fuer das Zuruecksetzen online sein."
+			return false, S("The player must be online to be reset.")
 		end
 		if not get_tutorial_pos() then
-			return false, "Der Tutorial-Start ist noch nicht gesetzt."
+			return false, S("The tutorial start has not been set yet.")
 		end
 		player:get_meta():set_string(state_key, pending)
 		send_to_tutorial(player)
-		return true, name .. " wurde zum Tutorial geschickt."
+		return true, S("@1 was sent to the tutorial.", name)
 	end,
 })

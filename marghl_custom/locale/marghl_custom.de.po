@@ -1,0 +1,55 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: marghl_custom\n"
+"Language: de\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Tutorial exit (radius: @1)"
+msgstr "Tutorial-Ende (Radius: @1)"
+
+msgid "Detection radius"
+msgstr "Erkennungsradius"
+
+msgid "Radius (1-@1)"
+msgstr "Radius (1-@1)"
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "Tutorial exit"
+msgstr "Tutorial-Ende"
+
+msgid "Sets the starting point for new tutorial players"
+msgstr "Setzt den Startpunkt fuer neue Tutorial-Spieler"
+
+msgid "Player is not online."
+msgstr "Spieler ist nicht online."
+
+msgid "Tutorial start set: @1"
+msgstr "Tutorial-Start gesetzt: @1"
+
+msgid "Sets the real spawn after completing the tutorial"
+msgstr "Setzt den echten Spawn nach Abschluss des Tutorials"
+
+msgid "Real spawn set: @1"
+msgstr "Echter Spawn gesetzt: @1"
+
+msgid "Sends a player through the tutorial again"
+msgstr "Schickt einen Spieler erneut durch das Tutorial"
+
+msgid "<player name>"
+msgstr "<Spielername>"
+
+msgid "Unknown player."
+msgstr "Unbekannter Spieler."
+
+msgid "The player must be online to be reset."
+msgstr "Der Spieler muss fuer das Zuruecksetzen online sein."
+
+msgid "The tutorial start has not been set yet."
+msgstr "Der Tutorial-Start ist noch nicht gesetzt."
+
+msgid "@1 was sent to the tutorial."
+msgstr "@1 wurde zum Tutorial geschickt."
+
