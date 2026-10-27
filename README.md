@@ -26,3 +26,11 @@ jeweiligen Untermods.
 `tools/list_translation_status.sh` durchsucht einen Mod-Ordner und gibt eine
 tabulatorgetrennte Liste auf stdout aus. Dadurch kann die Ausgabe direkt in
 Textdateien umgeleitet oder mit `awk` nach Status gefiltert werden.
+
+## Git-Updates pruefen
+
+`tools/check_mod_updates.sh` prueft jedes direkte Paketverzeichnis im
+Mod-Ordner. Es gibt nur Pakete mit verfuegbarem Update (`Update`) und Pakete
+ohne Git-Metadaten (`kein git`) aus. Aktuelle Git-Repositories erzeugen keine
+Ausgabe. Abruf- und Konfigurationsfehler werden getrennt nach stderr
+geschrieben.
