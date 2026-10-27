@@ -20,3 +20,9 @@ Funktionsbereiche miteinander zu vermischen.
 
 Alle Befehle und die genaue Bedienung stehen in den README-Dateien der
 jeweiligen Untermods.
+
+## Uebersetzungsstatus auflisten
+
+`tools/list_translation_status.sh` durchsucht einen Mod-Ordner und gibt eine
+tabulatorgetrennte Liste auf stdout aus. Dadurch kann die Ausgabe direkt in
+Textdateien umgeleitet oder mit `awk` nach Status gefiltert werden.
