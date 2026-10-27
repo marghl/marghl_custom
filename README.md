@@ -34,3 +34,9 @@ Mod-Ordner. Es gibt nur Pakete mit verfuegbarem Update (`Update`) und Pakete
 ohne Git-Metadaten (`kein git`) aus. Aktuelle Git-Repositories erzeugen keine
 Ausgabe. Abruf- und Konfigurationsfehler werden getrennt nach stderr
 geschrieben.
+
+## Inaktive Welt-Mods auflisten
+
+`tools/list_inactive_world_mods.sh` vergleicht die installierten Mods mit
+`world.mt`. Fuer jeden fehlenden, leeren oder deaktivierten `load_mod_*`-Eintrag
+gibt es ausschliesslich den vollstaendigen Pfad des betreffenden Mods aus.
