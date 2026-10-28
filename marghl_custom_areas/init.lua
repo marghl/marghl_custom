@@ -1,4 +1,19 @@
 local S = minetest.get_translator(minetest.get_current_modname())
+
+local protection_privileges = {
+	protect_streets = "Darf in geschuetzten oeffentlichen Strassen bauen",
+	protect_public = "Darf in geschuetzten oeffentlichen Bereichen bauen",
+	protect_infra = "Darf an geschuetzter oeffentlicher Infrastruktur bauen",
+}
+
+for name, description in pairs(protection_privileges) do
+	minetest.register_privilege(name, {
+		description = description,
+		give_to_singleplayer = false,
+		give_to_admin = true,
+	})
+end
+
 local original_can_interact = areas.canInteract
 local last_safe_meta_key = "marghl_custom_areas:last_safe_position"
 local last_blocked_area = {}

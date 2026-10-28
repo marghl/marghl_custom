@@ -9,6 +9,9 @@ Funktionsbereiche miteinander zu vermischen.
   Node `marghl_custom:tutorial_exit` bleiben erhalten, damit vorhandene Bloecke
   und gespeicherte Positionen weiter funktionieren.
 - `marghl_custom_weather`: Schaltet das Wetter in ausgewaehlten Areas aus.
+- `marghl_custom_areas`: Erweitert Areas um privilegienbasierte Freigaben und
+  registriert `protect_streets`, `protect_public` und `protect_infra` fuer
+  geschuetzte oeffentliche Bauten.
 - `marghl_custom_admin`: Administrative Diagnosebefehle.
 - `marghl_custom_warehouse`: Weltweite leere Lagerhausschicht mit Bedrock-Boden
   bei `Y = -30000`.
