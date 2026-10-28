@@ -1,0 +1,29 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: marghl_custom_mobs\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "You have successfully broken in the horse."
+msgstr ""
+
+msgid "The horse threw you off. The next attempt will be easier."
+msgstr ""
+
+msgid "You stopped breaking in the horse."
+msgstr ""
+
+msgid "Stay on the horse for 15 seconds. Sneak to stop the attempt."
+msgstr ""
+
+msgid "The saddle has been fitted."
+msgstr ""
+
+msgid "Horse inventory"
+msgstr ""
+
+msgid "Player inventory"
+msgstr ""
+
+msgid "The saddlebags have been fitted."
+msgstr ""

@@ -12,6 +12,8 @@ Funktionsbereiche miteinander zu vermischen.
 - `marghl_custom_areas`: Erweitert Areas um privilegienbasierte Freigaben und
   registriert `protect_streets`, `protect_public` und `protect_infra` fuer
   geschuetzte oeffentliche Bauten.
+- `marghl_custom_mobs`: Macht das Mobs-Redo-Pferd zureitbar und gezaehmte
+  Kuehe sowie Warzenschweine mit einem Sattel reitbar.
 - `marghl_custom_admin`: Administrative Diagnosebefehle.
 - `marghl_custom_warehouse`: Weltweite leere Lagerhausschicht mit Bedrock-Boden
   bei `Y = -30000`.
