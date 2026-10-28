@@ -420,7 +420,8 @@ local function override_livestock(entity_name, values)
 					S("The saddle has been fitted."))
 				return
 			end
-			if not self.driver and self._marghl_saddle and itemname == "" then
+			if not self.driver and self._marghl_saddle
+			and (itemname == "" or itemname == "mobs:saddle") then
 				configure_mount(self, values)
 				mobs.attach(self, clicker)
 				return

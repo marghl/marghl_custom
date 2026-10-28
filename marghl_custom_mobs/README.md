@@ -21,5 +21,6 @@ fallengelassen. Das Inventar bleibt beim Einfangen mit dem Lasso erhalten.
 
 `mobs_animal:cow` und `mobs_animal:pumba` werden weiterhin durch Fuettern
 gezaehmt. Der Eigentuemer kann danach mit `mobs:saddle` einen dauerhaften Sattel
-anlegen und das Tier anschliessend mit leerer Hand besteigen. Beim Tod des Tiers
-wird der Sattel fallengelassen.
+anlegen und das Tier anschliessend mit leerer Hand oder einem weiteren
+Rechtsklick mit `mobs:saddle` besteigen. Beim Tod des Tiers wird der Sattel
+fallengelassen.
