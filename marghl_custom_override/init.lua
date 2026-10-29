@@ -1,11 +1,13 @@
--- Cottages: keep existing anvils and hammers functional, but prevent new
--- ones from being crafted and hide them from compatible item lists.
-local hidden_cottages_items = {
+-- Keep existing nodes and tools functional, but prevent new ones from being
+-- crafted and hide them from creative inventories and compatible craft guides.
+local hidden_items = {
 	"cottages:anvil",
 	"cottages:hammer",
+	"jumpdrive:backbone",
+	"jumpdrive:fleet_controller",
 }
 
-for _, itemname in ipairs(hidden_cottages_items) do
+for _, itemname in ipairs(hidden_items) do
 	local recipe_removed = core.clear_craft({ output = itemname })
 
 	local definition = core.registered_items[itemname]
