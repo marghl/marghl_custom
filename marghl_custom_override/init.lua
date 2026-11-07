@@ -27,3 +27,14 @@ for _, itemname in ipairs(hidden_items) do
 		core.log("warning", "[marghl_custom_override] Item not found: " .. itemname)
 	end
 end
+
+-- Avoid the recipe collision between the wooden bucket and wooden bowls.
+core.clear_craft({ output = "bucket_wooden:bucket_empty" })
+core.register_craft({
+	output = "bucket_wooden:bucket_empty",
+	recipe = {
+		{ "group:wood", "", "group:wood" },
+		{ "group:wood", "", "group:wood" },
+		{ "", "group:wood", "" },
+	},
+})

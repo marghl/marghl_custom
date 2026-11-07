@@ -21,7 +21,9 @@ Funktionsbereiche miteinander zu vermischen.
   benannte Speicherstaende.
 - `marghl_custom_override`: Sammelt serverweite Anpassungen vorhandener Mods.
   Aktuell entfernt er die Rezepte und Guide-Eintraege fuer den
-  Cottages-Amboss und -Hammer, ohne vorhandene Exemplare zu loeschen.
+  Cottages-Amboss und -Hammer, ohne vorhandene Exemplare zu loeschen, blendet
+  ausgewaehlte Jumpdrive-Komponenten aus und ersetzt das kollidierende Rezept
+  des Holzeimers.
 
 Alle Befehle und die genaue Bedienung stehen in den README-Dateien der
 jeweiligen Untermods.
