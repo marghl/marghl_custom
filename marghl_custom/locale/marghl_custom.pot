@@ -52,3 +52,11 @@ msgstr ""
 msgid "@1 was sent to the tutorial."
 msgstr ""
 
+msgid "May remain AFK without being disconnected"
+msgstr ""
+
+msgid "AFK warning: You will be disconnected in @1 seconds."
+msgstr ""
+
+msgid "Disconnected after @1 seconds of inactivity."
+msgstr ""

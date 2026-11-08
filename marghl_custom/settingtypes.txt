@@ -3,3 +3,9 @@ marghl_custom_tutorial_radius (Tutorial-Ende: Standardradius) int 4 1 32
 
 # Hoechster Radius, den ein Administrator am Block einstellen kann
 marghl_custom_tutorial_radius_max (Tutorial-Ende: maximaler Radius) int 32 1 128
+
+# Inaktivitaet in Sekunden bis zur Trennung. Das Privileg allow_afk nimmt einen Spieler aus.
+marghl_custom_afk_kick_time (AFK-Kick nach Sekunden) int 300 1 86400
+
+# Sekunden zwischen einmaliger Warnung und Trennung. 0 deaktiviert die Warnung.
+marghl_custom_afk_warning_time (AFK-Warnzeit) int 30 0 3600

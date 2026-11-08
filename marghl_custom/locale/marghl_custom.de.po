@@ -53,3 +53,11 @@ msgstr "Der Tutorial-Start ist noch nicht gesetzt."
 msgid "@1 was sent to the tutorial."
 msgstr "@1 wurde zum Tutorial geschickt."
 
+msgid "May remain AFK without being disconnected"
+msgstr "Darf AFK bleiben, ohne getrennt zu werden"
+
+msgid "AFK warning: You will be disconnected in @1 seconds."
+msgstr "AFK-Warnung: Du wirst in @1 Sekunden getrennt."
+
+msgid "Disconnected after @1 seconds of inactivity."
+msgstr "Nach @1 Sekunden Inaktivitaet getrennt."

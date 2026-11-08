@@ -3,3 +3,4 @@ marghl_custom.storage = minetest.get_mod_storage()
 marghl_custom.S = minetest.get_translator(minetest.get_current_modname())
 
 dofile(minetest.get_modpath(minetest.get_current_modname()) .. "/tutorial.lua")
+dofile(minetest.get_modpath(minetest.get_current_modname()) .. "/afk_kick.lua")
