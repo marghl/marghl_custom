@@ -4,8 +4,15 @@ marghl_custom_tutorial_radius (Tutorial-Ende: Standardradius) int 4 1 32
 # Hoechster Radius, den ein Administrator am Block einstellen kann
 marghl_custom_tutorial_radius_max (Tutorial-Ende: maximaler Radius) int 32 1 128
 
-# Inaktivitaet in Sekunden bis zur Trennung. Das Privileg allow_afk nimmt einen Spieler aus.
-marghl_custom_afk_kick_time (AFK-Kick nach Sekunden) int 300 1 86400
+# Sekunden ohne Aktivitaet bis ein Spieler als idle gilt.
+marghl_custom_idle_time (Idle nach Sekunden) int 300 1 86400
 
-# Sekunden zwischen einmaliger Warnung und Trennung. 0 deaktiviert die Warnung.
-marghl_custom_afk_warning_time (AFK-Warnzeit) int 30 0 3600
+# Mindestdauer der Untaetigkeit bzw. des afk-Status, bevor ein Spieler gekickt werden darf.
+marghl_custom_afk_kick_min_time (Mindestdauer vor Belegungs-Kick) int 300 0 86400
+
+# Anteil belegter Plaetze, oberhalb dessen der laengste idle-Spieler gekickt wird.
+# Falls kein geeigneter idle-Spieler vorhanden ist, folgt der laengste afk-Spieler.
+marghl_custom_afk_kick_occupancy (Belegungsgrenze fuer AFK-Kick) float 0.75 0 1
+
+# Sekunden zwischen den Pruefungen der Serverbelegung.
+marghl_custom_afk_check_interval (Pruefintervall fuer AFK-Kick) int 5 1 300
